@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Logo" src="https://www.figma.com/file/QGWQZSM4m5XzwDkcxcr5ny/Move.it-1.0-Copy?node-id=150001%3A139" width="200px">
+  <img alt="Logo" src="https://svgshare.com/i/UPM.svg" width="200px">
 </h1>
 
 <h3 align="center">
