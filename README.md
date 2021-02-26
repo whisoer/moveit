@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src='https://svgshare.com/i/UPM.svg' alt="Logo" width="200px" />
+  <img src='https://svgshare.com/i/UU6.svg' alt="Logo" width="200px" />
 </h1>
 
 <h3 align="center">
