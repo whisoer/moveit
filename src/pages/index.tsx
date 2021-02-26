@@ -1,5 +1,7 @@
 import { useContext } from "react";
 
+import { GetServerSideProps } from "next";
+
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { Countdown } from "../components/Countdown";
 import { ChallengeBox } from "../components/ChallengeBox";
@@ -7,23 +9,37 @@ import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 
 import { CountdownProvider } from "../contexts/CountdownContext";
-import { ProfileContext } from "../contexts/ProfileContext";
+import { ChallengesProvider } from "../contexts/ChallengesContext";
+import { ProfileProvider } from "../contexts/ProfileContext";
 
 import Head from "next/head";
 
 import styles from "../styles/pages/Home.module.css";
 
-export default function Home() {
-  const { user } = useContext(ProfileContext);
+interface GithubUser {
+  avatar_url: string;
+  name: string;
+}
+interface HomeProps {
+  githubUser: GithubUser;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+}
 
+export default function Home(props: HomeProps) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Início | move.it</title>
-      </Head>
+    <ProfileProvider>
+      <ChallengesProvider
+        level={props.level}
+        currentExperience={props.currentExperience}
+        challengesCompleted={props.challengesCompleted}
+      >
+        <div className={styles.container}>
+          <Head>
+            <title>Início | move.it</title>
+          </Head>
 
-      {user.name ? (
-        <>
           <ExperienceBar />
 
           <CountdownProvider>
@@ -38,8 +54,20 @@ export default function Home() {
               </div>
             </section>
           </CountdownProvider>
-        </>
-      ) : null}
-    </div>
+        </div>
+      </ChallengesProvider>
+    </ProfileProvider>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted),
+    },
+  };
+};
