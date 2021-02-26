@@ -30,7 +30,6 @@ export function ProfileProvider({ children }: ProfileProviderProps) {
       showCancelButton: false,
       confirmButtonText: "Confirmar",
       showLoaderOnConfirm: true,
-      backdrop: "rgba(0, 0, 0, 0.97)",
       preConfirm: (login) => {
         return fetch(`//api.github.com/users/${login}`)
           .then((response) => {
