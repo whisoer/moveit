@@ -16,7 +16,7 @@ interface CountdownContextData {
   resetCountdown: () => void;
 }
 
-interface ChallengesProviderProps {
+interface CountdownProviderProps {
   children: ReactNode;
 }
 
@@ -24,7 +24,7 @@ export const CountdownContext = createContext({} as CountdownContextData);
 
 let countdownTimeout: NodeJS.Timeout;
 
-export function CountdownProvider({ children }: ChallengesProviderProps) {
+export function CountdownProvider({ children }: CountdownProviderProps) {
   const { startNewChallenge } = useContext(ChallengesContext);
 
   const [time, setTime] = useState(0.05 * 60);
