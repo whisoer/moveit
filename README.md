@@ -47,6 +47,7 @@ Technologies that I used to develop this web client
 - [NextJS](https://nextjs.org/)
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [SweetAlert2](https://sweetalert2.github.io/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
