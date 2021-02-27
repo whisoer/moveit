@@ -45,7 +45,7 @@ This application was created to gamify physical activities with the Pomodoro tec
 
 ## 🌐 Deploy
 
-### <a href="https://moveit-whisoer.vercel.app/"><img src='https://svgshare.com/i/UU6.svg' alt="Logo" /></a>
+### <a href="https://moveit-whisoer.vercel.app/"><img src='https://svgshare.com/i/UYk.svg' alt="Logo" /></a>
 
 ## 🚀 Technologies
 
