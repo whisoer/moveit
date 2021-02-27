@@ -59,6 +59,10 @@
   transition: background-color 0.2s;
 }
 
+.countdonwButton img {
+  margin-left: 1rem;
+}
+
 .countdonwButton:not(:disabled):hover {
   background: var(--blue-dark);
 }
@@ -68,9 +72,25 @@
   color: var(--title);
 }
 
+.countdonwButtonActive img {
+  color: var(--title);
+}
+
+.countdonwButtonActive:not(:disabled) img:first-child {
+  display: none;
+}
+
 .countdonwButtonActive:not(:disabled):hover {
   background: var(--red);
   color: var(--white);
+}
+
+.countdonwButtonActive:not(:disabled):hover img:first-child {
+  display: flex;
+}
+
+.countdonwButtonActive:not(:disabled):hover img:last-child {
+  display: none;
 }
 
 .countdonwButton:disabled {
@@ -78,8 +98,4 @@
   color: var(--text);
   cursor: not-allowed;
   border-bottom: solid 4px var(--green);
-}
-
-.countdonwButton:disabled img {
-  margin-left: 1rem;
 }
