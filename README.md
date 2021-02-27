@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src='https://svgshare.com/i/UU6.svg' alt="Logo" width="200px" />
+  <img src='https://svgshare.com/i/UYx.svg' alt="Logo" />
 </h1>
 
 <h3 align="center">
@@ -28,17 +28,24 @@
 
 <p align="center">
   <a href="#-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>
 </p>
 
+![image](https://user-images.githubusercontent.com/33878228/109393048-5d766a80-78fe-11eb-9198-6d77792754c0.png)
+
 </br>
 
-## 🚧 About the project
+## 📖 About the project
 
-// TO DO
+This application was created to gamify physical activities with the Pomodoro technique, aiming at the fight against sedentalism.
+
+## 🌐 Deploy
+
+### <a href="https://moveit-whisoer.vercel.app/"><img src='https://svgshare.com/i/UU6.svg' alt="Logo" /></a>
 
 ## 🚀 Technologies
 
