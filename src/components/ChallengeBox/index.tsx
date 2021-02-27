@@ -1,11 +1,12 @@
-import { useContext } from "react";
-import { ChallengesContext } from "../contexts/ChallengesContext";
-import { CountdownContext } from "../contexts/CountdownContext";
-import styles from "../styles/components/ChallengeBox.module.css";
+import { useContext } from 'react';
+import { ChallengesContext } from '../../contexts/ChallengesContext';
+import { CountdownContext } from '../../contexts/CountdownContext';
+
+import { Container, ActiveBox, NotActiveBox } from './styles';
 
 export function ChallengeBox() {
   const { activeChallenge, resetChallenge, completeChallenge } = useContext(
-    ChallengesContext
+    ChallengesContext,
   );
   const { resetCountdown } = useContext(CountdownContext);
 
@@ -20,10 +21,11 @@ export function ChallengeBox() {
   }
 
   return (
-    <div className={styles.challengeBoxContainer}>
+    <Container>
       {activeChallenge ? (
-        <div className={styles.challengeActive}>
+        <ActiveBox>
           <header>Ganhe {activeChallenge.amount} xp</header>
+
           <main>
             <img src={`icons/${activeChallenge.type}.svg`} alt="body" />
             <strong>Novo desafio</strong>
@@ -33,29 +35,29 @@ export function ChallengeBox() {
           <footer>
             <button
               type="button"
-              className={styles.challengeFailedButton}
+              className="challengeFailedButton"
               onClick={handleChallengeFailed}
             >
               Falhei
             </button>
             <button
               type="button"
-              className={styles.challengeSucceededButton}
+              className="challengeSucceededButton"
               onClick={handleChallengeSucceeded}
             >
               Completei
             </button>
           </footer>
-        </div>
+        </ActiveBox>
       ) : (
-        <div className={styles.challengeNotActive}>
+        <NotActiveBox>
           <strong>Finalize um ciclo para receber um desafio</strong>
           <p>
             <img src="icons/level-up.svg" alt="Level Up" />
             Avance de level completando desafios.
           </p>
-        </div>
+        </NotActiveBox>
       )}
-    </div>
+    </Container>
   );
 }
