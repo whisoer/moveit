@@ -49,6 +49,9 @@ export function ChallengesProvider({
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
   useEffect(() => {
+    if (!("Notificantion" in window)) {
+      return null;
+    }
     Notification.requestPermission();
   }, []);
 
